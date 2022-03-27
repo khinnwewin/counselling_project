@@ -14,7 +14,9 @@ function showPrettyStatus($status)
     }
 }
 
+
 function getUser($user_id) {
     $user = User::where('id', $user_id)->first();
     return $user->name;
 }
+

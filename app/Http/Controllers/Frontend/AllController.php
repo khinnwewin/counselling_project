@@ -22,10 +22,9 @@ class AllController extends Controller
 
     public function counseller_list($id)
     {
-        $categories=Category::find($id);
-         // dd($categories);
-        $users=User::where('usertype', '=', 'Counseller')->get();
-        // dd($user);
+            $categories=Category::find($id);
+          // dd($categories);
+          $users=User::where('usertype', '=', 'Counseller')->get();
         return view('frontend.counseller_list', compact('categories','users'));
        
     }

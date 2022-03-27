@@ -22,8 +22,8 @@ class CategoryController extends Controller
     
     public function create()
     {
-      
-        return view('admin.category.create');
+        $users=User::where('usertype', '=', 'Counseller')->get();
+        return view('admin.category.create', compact('users'));
     }
 
    
@@ -46,11 +46,12 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = Category::find($id);
+        $users=User::where('usertype', '=', 'Counseller')->get();
         if(empty($category)) {
             Alert::error('Error', 'Category Not Found');
             return redirect(route('category.index'));
         }
-        return view('admin.category.edit', compact('category'));
+        return view('admin.category.edit', compact('category','users'));
     }
 
    

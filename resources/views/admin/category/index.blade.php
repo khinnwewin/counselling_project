@@ -15,6 +15,7 @@
                 <table class="table table-striped table-hover tbl_repeat" id="sortable">
                     <thead>
                         <th>No.</th>
+                        <th>Counseller Name</th>
                         <th>Counsel</th>
                         <th colspan="3">Action</th>
                     </thead>
@@ -24,6 +25,7 @@
                     @foreach($categories as $category)
                         <tr>
                             <td>{{ $index++ }}</td>
+                            <td>{!!getUser($category->user_id)!!}</td>
                             <td>{!! $category->counsel !!}</td>
                             
                             <td>

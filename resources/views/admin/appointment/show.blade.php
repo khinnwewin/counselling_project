@@ -33,14 +33,14 @@
                                         <div class="btn-group" id="status" data-toggle="buttons">
                                             @if($appointment->status == 1)
                                                 <label class="btn btn-default btn-on btn-xs active">
-                                                <input type="radio" value="1" name="status">Yes</label>
+                                                <input type="radio" value="1" name="status">Accept</label>
                                                 <label class="btn btn-default btn-off btn-xs">
-                                                <input type="radio" value="0" name="status">No</label>
+                                                <input type="radio" value="0" name="status">Decline</label>
                                             @else
                                                 <label class="btn btn-default btn-on btn-xs">
-                                                <input type="radio" value="1" name="status">Yes</label>
+                                                <input type="radio" value="1" name="status">Accept</label>
                                                 <label class="btn btn-default btn-off btn-xs active">
-                                                <input type="radio" value="0" name="status">No</label>
+                                                <input type="radio" value="0" name="status">Decline</label>
                                             @endif
 
                                         </div>

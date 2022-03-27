@@ -26,8 +26,8 @@ class AppointmentRequest extends FormRequest
          return [
            'date' => 'required',
            'time' => 'required',
-           'user_id'=>'required'
-           
+           'user_id'=>'required',
+          
           
         ];
     }

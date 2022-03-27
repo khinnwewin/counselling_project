@@ -24,7 +24,8 @@ class CategoryRequest extends FormRequest
     public function rules()
     {
         return [
-           'counsel' => 'required'
+           'counsel' => 'required',
+           'user_id'=>'required'
           
         ];
     }
